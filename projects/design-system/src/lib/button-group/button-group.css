@@ -1,0 +1,29 @@
+:host {
+  display: inline-block;
+}
+
+.ds-button-group {
+  display: inline-flex;
+}
+
+.ds-button-group > ds-button:not(:first-child) {
+  margin-inline-start: -2px;
+}
+
+.ds-button-group > ds-button:not(:first-child):not(:last-child) {
+  --ds-button-radius: 0;
+}
+
+.ds-button-group > ds-button:first-child:not(:last-child) {
+  --ds-button-radius: var(--ds-radius-md) 0 0 var(--ds-radius-md);
+}
+
+.ds-button-group > ds-button:last-child:not(:first-child) {
+  --ds-button-radius: 0 var(--ds-radius-md) var(--ds-radius-md) 0;
+}
+
+.ds-button-group > ds-button:hover,
+.ds-button-group > ds-button:focus-within {
+  position: relative;
+  z-index: 1;
+}
