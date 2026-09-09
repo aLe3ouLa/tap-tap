@@ -5,7 +5,7 @@
 .ds-button {
   box-sizing: content-box;
   border: 0;
-  border-radius: var(--ds-radius-md);
+  border-radius: var(--ds-button-radius, var(--ds-radius-md));
   background: var(--ds-color-action-primary);
   color: var(--ds-color-text);
   cursor: pointer;
