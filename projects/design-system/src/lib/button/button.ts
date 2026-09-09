@@ -7,9 +7,10 @@ import { Component, input } from '@angular/core';
   templateUrl: './button.html',
 })
 export class Button {
-  variant = input<'primary' | 'outline' | 'ghost' | 'link'>('primary');
+  variant = input<'primary' | 'outline' | 'ghost' | 'link' | 'danger'>('primary');
   type = input<'button' | 'submit' | 'reset'>('button');
   size = input<'large' | 'medium' | 'small'>('medium');
   disabled = input(false);
   ariaLabel = input<string | null>(null);
+  iconOnly = input(false);
 }

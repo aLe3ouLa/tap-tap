@@ -6,6 +6,16 @@
   --ds-color-action-primary: #15c5ce;
   --ds-color-action-primary-hover: #00abb6;
   --ds-color-action-primary-text: #ffffff;
+  --ds-color-action-danger: #f64c4c;
+  --ds-color-action-danger-hover: #ec2d30;
+  --ds-color-action-danger-text: #ffffff;
+  --ds-color-action-outline-border-default: #e1e1e1;
+  --ds-color-action-outline-border-disabled: #eeeeee;
+  --ds-color-action-outline-text-disabled: #cacaca;
+  --ds-color-action-ghost-hover: #f5f5f5;
+  --ds-color-action-ghost-text-hover: #4b4b4b;
+  --ds-color-action-ghost-pressed: #e1e1e1;
+  --ds-color-action-ghost-disabled: #cacaca;
   --ds-color-surface-default: #ffffff;
   --ds-color-surface-subtle: #fafafa;
   --ds-color-surface-hover: #eeeeee;
