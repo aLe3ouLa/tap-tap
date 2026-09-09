@@ -1,0 +1,248 @@
+{
+  "color": {
+    "black": { "$type": "color", "$value": "#000000" },
+    "white": { "$type": "color", "$value": "#FFFFFF" },
+    "neutral": {
+      "700": { "$type": "color", "$value": "#1F1F1F" },
+      "600": { "$type": "color", "$value": "#4B4B4B" },
+      "500": { "$type": "color", "$value": "#8E8E8E" },
+      "400": { "$type": "color", "$value": "#CACACA" },
+      "300": { "$type": "color", "$value": "#E1E1E1" },
+      "200": { "$type": "color", "$value": "#EEEEEE" },
+      "100": { "$type": "color", "$value": "#F5F5F5" },
+      "50": { "$type": "color", "$value": "#FAFAFA" }
+    },
+    "primary": {
+      "700": { "$type": "color", "$value": "#00ABB6" },
+      "600": { "$type": "color", "$value": "#15C5CE" },
+      "500": { "$type": "color", "$value": "#47CFD6" },
+      "400": { "$type": "color", "$value": "#7DDDE1" },
+      "300": { "$type": "color", "$value": "#B0EBEC" },
+      "200": { "$type": "color", "$value": "#DFF7F7" },
+      "100": { "$type": "color", "$value": "#EEFCFC" },
+      "50": { "$type": "color", "$value": "#F9FFFF" }
+    },
+    "auxiliary": {
+      "700": { "$type": "color", "$value": "#FE632F" },
+      "600": { "$type": "color", "$value": "#FF8156" },
+      "500": { "$type": "color", "$value": "#FFA487" },
+      "400": { "$type": "color", "$value": "#FFC8B6" },
+      "300": { "$type": "color", "$value": "#FFE1D6" },
+      "200": { "$type": "color", "$value": "#FFF2EE" },
+      "100": { "$type": "color", "$value": "#FFF6F3" },
+      "50": { "$type": "color", "$value": "#FFFCFC" }
+    },
+    "danger": {
+      "700": { "$type": "color", "$value": "#EC2D30" },
+      "600": { "$type": "color", "$value": "#F64C4C" },
+      "500": { "$type": "color", "$value": "#EB6F70" },
+      "400": { "$type": "color", "$value": "#F49898" },
+      "300": { "$type": "color", "$value": "#FFCCD2" },
+      "200": { "$type": "color", "$value": "#FFEBEE" },
+      "100": { "$type": "color", "$value": "#FEF2F2" },
+      "50": { "$type": "color", "$value": "#FFFBFB" }
+    },
+    "warning": {
+      "700": { "$type": "color", "$value": "#FE9B0E" },
+      "600": { "$type": "color", "$value": "#FFAD0D" },
+      "500": { "$type": "color", "$value": "#FFC62B" },
+      "400": { "$type": "color", "$value": "#FFDD82" },
+      "300": { "$type": "color", "$value": "#FFEAB3" },
+      "200": { "$type": "color", "$value": "#FFF7E1" },
+      "100": { "$type": "color", "$value": "#FFF9EE" },
+      "50": { "$type": "color", "$value": "#FFFDFA" }
+    },
+    "success": {
+      "700": { "$type": "color", "$value": "#0C9D61" },
+      "600": { "$type": "color", "$value": "#47B881" },
+      "500": { "$type": "color", "$value": "#6BC497" },
+      "400": { "$type": "color", "$value": "#97D4B4" },
+      "300": { "$type": "color", "$value": "#C0E5D1" },
+      "200": { "$type": "color", "$value": "#E5F5EC" },
+      "100": { "$type": "color", "$value": "#F2FAF6" },
+      "50": { "$type": "color", "$value": "#FBFEFC" }
+    },
+    "info": {
+      "700": { "$type": "color", "$value": "#3A70E2" },
+      "600": { "$type": "color", "$value": "#3B82F6" },
+      "500": { "$type": "color", "$value": "#4BA1FF" },
+      "400": { "$type": "color", "$value": "#93C8FF" },
+      "300": { "$type": "color", "$value": "#BDDDFF" },
+      "200": { "$type": "color", "$value": "#E4F2FF" },
+      "100": { "$type": "color", "$value": "#F1F8FF" },
+      "50": { "$type": "color", "$value": "#F8FCFF" }
+    }
+  },
+  "shadow": {
+    "elevation": {
+      "1": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.02)",
+            "offsetX": "0px",
+            "offsetY": "1px",
+            "blur": "1px",
+            "spread": "0px"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.04)",
+            "offsetX": "0px",
+            "offsetY": "2px",
+            "blur": "4px",
+            "spread": "0px"
+          }
+        ]
+      },
+      "2": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.04)",
+            "offsetX": "0px",
+            "offsetY": "1px",
+            "blur": "4px",
+            "spread": "0px"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.08)",
+            "offsetX": "0px",
+            "offsetY": "4px",
+            "blur": "10px",
+            "spread": "0px"
+          }
+        ]
+      },
+      "3": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.04)",
+            "offsetX": "0px",
+            "offsetY": "2px",
+            "blur": "20px",
+            "spread": "0px"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.08)",
+            "offsetX": "0px",
+            "offsetY": "8px",
+            "blur": "32px",
+            "spread": "0px"
+          }
+        ]
+      },
+      "4": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "color": "rgba(0, 0, 0, 0.06)",
+            "offsetX": "0px",
+            "offsetY": "8px",
+            "blur": "20px",
+            "spread": "0px"
+          },
+          {
+            "color": "rgba(0, 0, 0, 0.12)",
+            "offsetX": "0px",
+            "offsetY": "24px",
+            "blur": "60px",
+            "spread": "0px"
+          }
+        ]
+      }
+    }
+  },
+  "font": {
+    "family": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": "'Segoe UI', system-ui, -apple-system, sans-serif"
+      }
+    },
+    "weight": {
+      "regular": { "$type": "fontWeight", "$value": 400 },
+      "medium": { "$type": "fontWeight", "$value": 500 }
+    }
+  },
+  "typography": {
+    "h1": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "1.875rem",
+        "lineHeight": "2.375rem"
+      }
+    },
+    "h2": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.medium}",
+        "fontSize": "1.5rem",
+        "lineHeight": "2rem"
+      }
+    },
+    "h3": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "1.25rem",
+        "lineHeight": "1.75rem"
+      }
+    },
+    "title": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "1.125rem",
+        "lineHeight": "1.625rem"
+      }
+    },
+    "subtitle": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "1rem",
+        "lineHeight": "1.5rem"
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "0.875rem",
+        "lineHeight": "1.375rem"
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{font.family.base}",
+        "fontWeight": "{font.weight.regular}",
+        "fontSize": "0.75rem",
+        "lineHeight": "1.125rem"
+      }
+    }
+  },
+  "space": {
+    "1": { "$type": "dimension", "$value": "0.25rem" },
+    "2": { "$type": "dimension", "$value": "0.5rem" },
+    "3": { "$type": "dimension", "$value": "0.75rem" },
+    "4": { "$type": "dimension", "$value": "1rem" },
+    "5": { "$type": "dimension", "$value": "1.25rem" },
+    "6": { "$type": "dimension", "$value": "1.5rem" },
+    "7": { "$type": "dimension", "$value": "2rem" },
+    "8": { "$type": "dimension", "$value": "2.5rem" },
+    "9": { "$type": "dimension", "$value": "3rem" },
+    "10": { "$type": "dimension", "$value": "4rem" }
+  },
+  "radius": {
+    "md": { "$type": "dimension", "$value": "0.25rem" }
+  }
+}

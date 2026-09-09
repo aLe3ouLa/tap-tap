@@ -1,0 +1,64 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --ds-primitive-color-black: #000000;
+  --ds-primitive-color-white: #ffffff;
+  --ds-primitive-color-neutral-50: #fafafa;
+  --ds-primitive-color-neutral-100: #f5f5f5;
+  --ds-primitive-color-neutral-200: #eeeeee;
+  --ds-primitive-color-neutral-300: #e1e1e1;
+  --ds-primitive-color-neutral-400: #cacaca;
+  --ds-primitive-color-neutral-500: #8e8e8e;
+  --ds-primitive-color-neutral-600: #4b4b4b;
+  --ds-primitive-color-neutral-700: #1f1f1f;
+  --ds-primitive-color-primary-50: #f9ffff;
+  --ds-primitive-color-primary-100: #eefcfc;
+  --ds-primitive-color-primary-200: #dff7f7;
+  --ds-primitive-color-primary-300: #b0ebec;
+  --ds-primitive-color-primary-400: #7ddde1;
+  --ds-primitive-color-primary-500: #47cfd6;
+  --ds-primitive-color-primary-600: #15c5ce;
+  --ds-primitive-color-primary-700: #00abb6;
+  --ds-primitive-color-auxiliary-50: #fffcfc;
+  --ds-primitive-color-auxiliary-100: #fff6f3;
+  --ds-primitive-color-auxiliary-200: #fff2ee;
+  --ds-primitive-color-auxiliary-300: #ffe1d6;
+  --ds-primitive-color-auxiliary-400: #ffc8b6;
+  --ds-primitive-color-auxiliary-500: #ffa487;
+  --ds-primitive-color-auxiliary-600: #ff8156;
+  --ds-primitive-color-auxiliary-700: #fe632f;
+  --ds-primitive-color-danger-50: #fffbfb;
+  --ds-primitive-color-danger-100: #fef2f2;
+  --ds-primitive-color-danger-200: #ffebee;
+  --ds-primitive-color-danger-300: #ffccd2;
+  --ds-primitive-color-danger-400: #f49898;
+  --ds-primitive-color-danger-500: #eb6f70;
+  --ds-primitive-color-danger-600: #f64c4c;
+  --ds-primitive-color-danger-700: #ec2d30;
+  --ds-primitive-color-warning-50: #fffdfa;
+  --ds-primitive-color-warning-100: #fff9ee;
+  --ds-primitive-color-warning-200: #fff7e1;
+  --ds-primitive-color-warning-300: #ffeab3;
+  --ds-primitive-color-warning-400: #ffdd82;
+  --ds-primitive-color-warning-500: #ffc62b;
+  --ds-primitive-color-warning-600: #ffad0d;
+  --ds-primitive-color-warning-700: #fe9b0e;
+  --ds-primitive-color-success-50: #fbfefc;
+  --ds-primitive-color-success-100: #f2faf6;
+  --ds-primitive-color-success-200: #e5f5ec;
+  --ds-primitive-color-success-300: #c0e5d1;
+  --ds-primitive-color-success-400: #97d4b4;
+  --ds-primitive-color-success-500: #6bc497;
+  --ds-primitive-color-success-600: #47b881;
+  --ds-primitive-color-success-700: #0c9d61;
+  --ds-primitive-color-info-50: #f8fcff;
+  --ds-primitive-color-info-100: #f1f8ff;
+  --ds-primitive-color-info-200: #e4f2ff;
+  --ds-primitive-color-info-300: #bdddff;
+  --ds-primitive-color-info-400: #93c8ff;
+  --ds-primitive-color-info-500: #4ba1ff;
+  --ds-primitive-color-info-600: #3b82f6;
+  --ds-primitive-color-info-700: #3a70e2;
+}

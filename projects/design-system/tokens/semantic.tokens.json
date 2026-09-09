@@ -1,0 +1,29 @@
+{
+  "color": {
+    "action": {
+      "primary": { "$type": "color", "$value": "{color.primary.600}" },
+      "primary-hover": { "$type": "color", "$value": "{color.primary.700}" },
+      "primary-text": { "$type": "color", "$value": "{color.white}" }
+    },
+    "surface": {
+      "default": { "$type": "color", "$value": "{color.white}" },
+      "subtle": { "$type": "color", "$value": "{color.neutral.50}" },
+      "hover": { "$type": "color", "$value": "{color.neutral.200}" },
+      "inverse": { "$type": "color", "$value": "{color.neutral.700}" }
+    },
+    "border": {
+      "default": { "$type": "color", "$value": "{color.neutral.200}" }
+    },
+    "text": {
+      "default": { "$type": "color", "$value": "{color.neutral.700}" },
+      "muted": { "$type": "color", "$value": "{color.neutral.500}" },
+      "inverse": { "$type": "color", "$value": "{color.white}" }
+    },
+    "feedback": {
+      "error": { "$type": "color", "$value": "{color.danger.700}" },
+      "success": { "$type": "color", "$value": "{color.success.700}" },
+      "warning": { "$type": "color", "$value": "{color.warning.700}" },
+      "info": { "$type": "color", "$value": "{color.info.700}" }
+    }
+  }
+}

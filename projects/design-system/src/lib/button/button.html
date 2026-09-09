@@ -1,0 +1,10 @@
+<button
+  class="ds-button ds-button--{{ variant() }} ds-button--{{ size() }}"
+  [type]="type()"
+  [disabled]="disabled()"
+  [attr.aria-label]="ariaLabel()"
+>
+  <ng-content select="[icon-start]"></ng-content>
+  <ng-content></ng-content>
+  <ng-content select="[icon-end]"></ng-content>
+</button>

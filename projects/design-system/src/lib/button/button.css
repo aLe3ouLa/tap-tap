@@ -1,0 +1,103 @@
+:host {
+  display: inline-block;
+}
+
+.ds-button {
+  box-sizing: content-box;
+  border: 0;
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-action-primary);
+  color: var(--ds-color-text);
+  cursor: pointer;
+  font-family: var(--ds-font-family-base);
+  font-weight: var(--ds-font-weight-medium);
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-2);
+}
+
+.ds-button:hover:not(:disabled) {
+  background: var(--ds-color-action-primary-hover);
+}
+
+.ds-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ds-button:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ds-button--large {
+  height: 2.5rem; /* 40px */
+  min-width: 5.625rem; /* 90px */
+  padding: 0 var(--ds-space-2); /* 8px */
+  font: var(--ds-typography-subtitle);
+  font-weight: var(--ds-font-weight-medium);
+  --ds-icon-size: 1.125rem; /* 18px */
+}
+
+.ds-button--medium {
+  height: 2.25rem; /* 36px */
+  min-width: 5.125rem; /* 82px */
+  padding: 0 var(--ds-space-2); /* 8px */
+  font: var(--ds-typography-body);
+  font-weight: var(--ds-font-weight-medium);
+  --ds-icon-size: 1rem; /* 16px */
+}
+
+.ds-button--small {
+  height: 1.5rem; /* 24px */
+  min-width: 3.375rem; /* 54px */
+  padding: 0 var(--ds-space-1); /* 4px */
+  font: var(--ds-typography-caption);
+  font-weight: var(--ds-font-weight-medium);
+  --ds-icon-size: 0.875rem; /* 14px */
+}
+
+.ds-button--outline {
+  border: 2px solid var(--ds-color-action-primary);
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-text-default);
+}
+
+.ds-button--outline:hover:not(:disabled) {
+  background: var(--ds-color-surface-subtle);
+}
+
+.ds-button--ghost {
+  border: none;
+  background: none;
+  color: var(--ds-color-text-default);
+}
+
+.ds-button--ghost:hover:not(:disabled) {
+  background: var(--ds-color-surface-subtle);
+}
+
+.ds-button--link {
+  border: none;
+  background: none;
+  color: var(--ds-color-text-default);
+}
+
+.ds-button--link:hover:not(:disabled) {
+  background: var(--ds-color-surface-subtle);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-button {
+    transition: none;
+  }
+}
