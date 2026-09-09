@@ -1,0 +1,48 @@
+:host {
+  /* The host stays out of the box tree so the <li> below is a direct flex
+     item of the <ol> in ds-breadcrumb, keeping list semantics intact. */
+  display: contents;
+}
+
+.ds-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  font: var(--ds-typography-body);
+}
+
+/* Author styles always beat the UA [hidden] default, even at equal
+   specificity, so this has to be stated explicitly. */
+.ds-breadcrumb-item[hidden] {
+  display: none;
+}
+
+.ds-breadcrumb-item__separator {
+  margin-inline: var(--ds-space-1);
+  color: var(--ds-color-text-muted);
+}
+
+.ds-breadcrumb-item__link {
+  color: var(--ds-color-text-muted);
+  text-decoration: none;
+}
+
+.ds-breadcrumb-item__link:hover {
+  color: var(--ds-color-action-primary-hover);
+  text-decoration: underline;
+}
+
+.ds-breadcrumb-item__link:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-breadcrumb-item__link--current {
+  color: var(--ds-color-text-default);
+  font-weight: var(--ds-font-weight-medium);
+  pointer-events: none;
+}
+
+.ds-breadcrumb-item__link--current:hover {
+  color: var(--ds-color-text-default);
+  text-decoration: none;
+}

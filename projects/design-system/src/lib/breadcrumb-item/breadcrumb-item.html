@@ -1,0 +1,15 @@
+<li class="ds-breadcrumb-item" [hidden]="hidden()">
+  @if (showSeparator()) {
+    <span class="ds-breadcrumb-item__separator" aria-hidden="true">{{
+      collapsedBefore() ? '/  ···  /' : '/'
+    }}</span>
+  }
+  <a
+    class="ds-breadcrumb-item__link"
+    [class.ds-breadcrumb-item__link--current]="!href()"
+    [attr.href]="href()"
+    [attr.aria-current]="href() ? null : 'page'"
+  >
+    <ng-content></ng-content>
+  </a>
+</li>
