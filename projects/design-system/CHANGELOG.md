@@ -1,5 +1,11 @@
 # @taptap/design-system
 
+## 0.4.0
+
+### Minor Changes
+
+- Add Breadcrumb and BreadcrumbItem components, with an optional `maxItems` input on Breadcrumb that collapses middle items into a static '···' when there are more items than the limit.
+
 ## 0.3.0
 
 ### Minor Changes
