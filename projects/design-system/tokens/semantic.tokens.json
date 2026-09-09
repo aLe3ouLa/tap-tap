@@ -3,7 +3,17 @@
     "action": {
       "primary": { "$type": "color", "$value": "{color.primary.600}" },
       "primary-hover": { "$type": "color", "$value": "{color.primary.700}" },
-      "primary-text": { "$type": "color", "$value": "{color.white}" }
+      "primary-text": { "$type": "color", "$value": "{color.white}" },
+      "danger": { "$type": "color", "$value": "{color.danger.600}" },
+      "danger-hover": { "$type": "color", "$value": "{color.danger.700}" },
+      "danger-text": { "$type": "color", "$value": "{color.white}" },
+      "outline-border-default": { "$type": "color", "$value": "{color.neutral.300}" },
+      "outline-border-disabled": { "$type": "color", "$value": "{color.neutral.200}" },
+      "outline-text-disabled": { "$type": "color", "$value": "{color.neutral.400}" },
+      "ghost-hover": { "$type": "color", "$value": "{color.neutral.100}" },
+      "ghost-text-hover": { "$type": "color", "$value": "{color.neutral.600}" },
+      "ghost-pressed": { "$type": "color", "$value": "{color.neutral.300}" },
+      "ghost-disabled": { "$type": "color", "$value": "{color.neutral.400}" }
     },
     "surface": {
       "default": { "$type": "color", "$value": "{color.white}" },

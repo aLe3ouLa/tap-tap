@@ -1,5 +1,6 @@
 <button
   class="ds-button ds-button--{{ variant() }} ds-button--{{ size() }}"
+  [class.ds-button--icon-only]="iconOnly()"
   [type]="type()"
   [disabled]="disabled()"
   [attr.aria-label]="ariaLabel()"

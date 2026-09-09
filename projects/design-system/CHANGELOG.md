@@ -1,5 +1,11 @@
 # @taptap/design-system
 
+## 0.2.0
+
+### Minor Changes
+
+- Add a `danger` Button variant and an `iconOnly` input for rendering square icon-only buttons. Also refines the `outline`, `ghost`, and `link` variants with dedicated hover/active/disabled states backed by new design tokens, and adds Storybook examples showing icons used with the Button component.
+
 ## 0.1.0
 
 ### Minor Changes
