@@ -3,7 +3,7 @@ import { Breadcrumb } from './breadcrumb';
 import { BreadcrumbItem } from '../breadcrumb-item/breadcrumb-item';
 
 const meta: Meta<Breadcrumb> = {
-  title: 'Components/Breadcrumb',
+  title: 'Navigation/Breadcrumb',
   component: Breadcrumb,
   tags: ['autodocs'],
 };
