@@ -1,5 +1,11 @@
 # @taptap/design-system
 
+## 0.6.0
+
+### Minor Changes
+
+- Add radio component
+
 ## 0.5.0
 
 ### Minor Changes
