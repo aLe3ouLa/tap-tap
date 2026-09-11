@@ -9,3 +9,5 @@ export * from './lib/breadcrumb-item/breadcrumb-item';
 export * from './lib/pagination/pagination';
 export * from './lib/anchor/anchor';
 export * from './lib/anchor-link/anchor-link';
+export * from './lib/tab/tab';
+export * from './lib/tab-group/tab-group';

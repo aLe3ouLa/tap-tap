@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.ds-tab-group {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--ds-space-6);
+}
+
+.ds-tab-group--center {
+  justify-content: center;
+}
+
+.ds-tab-group--card {
+  align-items: center;
+  gap: var(--ds-space-2);
+}
+
+.ds-tab-group--bordered {
+  border-bottom: 1px solid var(--ds-color-border-default);
+}

@@ -1,0 +1,120 @@
+:host {
+  /* Keeps the <span> a direct flex item of the parent tablist, matching the
+     pattern documented in breadcrumb-item.css / anchor-link.css. */
+  display: contents;
+}
+
+.ds-tab {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ds-tab__button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+  padding: var(--ds-space-2) 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--ds-color-text-muted);
+  font: var(--ds-typography-subtitle);
+  font-family: var(--ds-font-family-base);
+  cursor: pointer;
+  --ds-icon-size: 1rem;
+}
+
+.ds-tab__button:hover:not(:disabled) {
+  color: var(--ds-color-action-primary-hover);
+}
+
+.ds-tab__button:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-tab--selected .ds-tab__button {
+  color: var(--ds-color-action-primary);
+  border-bottom-color: var(--ds-color-action-primary);
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.ds-tab--disabled .ds-tab__button {
+  color: var(--ds-color-action-outline-text-disabled);
+  cursor: not-allowed;
+}
+
+.ds-tab--small .ds-tab__button {
+  padding-block: var(--ds-space-1);
+  font: var(--ds-typography-caption);
+  --ds-icon-size: 0.875rem;
+}
+
+.ds-tab__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: var(--ds-space-1);
+  padding: 0.125rem;
+  border: none;
+  border-radius: var(--ds-radius-md);
+  background: none;
+  color: var(--ds-color-text-muted);
+  cursor: pointer;
+  --ds-icon-size: 0.75rem;
+}
+
+.ds-tab__close:hover:not(:disabled) {
+  background: var(--ds-color-surface-hover);
+  color: var(--ds-color-text-default);
+}
+
+.ds-tab__close:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-tab__close:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Card variant: the tab itself becomes a bordered chip and the button/close
+   inside it go borderless, instead of the line variant's underline. */
+.ds-tab--card {
+  padding: 0 var(--ds-space-2) 0 var(--ds-space-3);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md) var(--ds-radius-md) 0 0;
+  background: var(--ds-color-surface-subtle);
+}
+
+.ds-tab--card:not(.ds-tab--selected):hover {
+  background: var(--ds-color-surface-hover);
+}
+
+.ds-tab--card .ds-tab__button {
+  padding: var(--ds-space-2) 0;
+  border-bottom: none;
+  color: var(--ds-color-text-default);
+}
+
+.ds-tab--card.ds-tab--small .ds-tab__button {
+  padding-block: var(--ds-space-1);
+}
+
+.ds-tab--card.ds-tab--selected {
+  border-color: var(--ds-color-action-primary);
+  background: var(--ds-color-action-primary-subtle);
+}
+
+.ds-tab--card.ds-tab--selected .ds-tab__button {
+  color: var(--ds-color-action-primary-subtle-text);
+}
+
+.ds-tab--card.ds-tab--disabled {
+  opacity: 0.5;
+}
+
+.ds-tab--card.ds-tab--disabled .ds-tab__button {
+  color: var(--ds-color-text-default);
+}

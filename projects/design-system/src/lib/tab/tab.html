@@ -1,0 +1,30 @@
+<span
+  class="ds-tab"
+  [class.ds-tab--card]="variant() === 'card'"
+  [class.ds-tab--small]="size() === 'small'"
+  [class.ds-tab--selected]="selected()"
+  [class.ds-tab--disabled]="disabled()"
+>
+  <button
+    type="button"
+    role="tab"
+    class="ds-tab__button"
+    [attr.aria-selected]="selected()"
+    [attr.data-tab-index]="index()"
+    [disabled]="disabled()"
+  >
+    <ng-content select="[icon-start]"></ng-content>
+    <span class="ds-tab__label"><ng-content></ng-content></span>
+  </button>
+  @if (closable()) {
+    <button
+      type="button"
+      class="ds-tab__close"
+      [attr.data-tab-close]="index()"
+      [disabled]="disabled()"
+      aria-label="Close tab"
+    >
+      <ds-icon name="close" />
+    </button>
+  }
+</span>

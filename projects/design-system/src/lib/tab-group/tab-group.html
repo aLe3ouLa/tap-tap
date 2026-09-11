@@ -1,0 +1,11 @@
+<div
+  class="ds-tab-group"
+  role="tablist"
+  [class.ds-tab-group--card]="variant() === 'card'"
+  [class.ds-tab-group--center]="align() === 'center'"
+  [class.ds-tab-group--bordered]="bordered()"
+  [attr.aria-label]="ariaLabel()"
+  (click)="onClick($event)"
+>
+  <ng-content></ng-content>
+</div>
