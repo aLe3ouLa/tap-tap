@@ -3,6 +3,8 @@ import { Icon } from '../icon/icon';
 
 export type PaginationItem = number | 'start-ellipsis' | 'end-ellipsis';
 
+let nextId = 0;
+
 @Component({
   imports: [Icon],
   selector: 'ds-pagination',
@@ -10,6 +12,10 @@ export type PaginationItem = number | 'start-ellipsis' | 'end-ellipsis';
   templateUrl: './pagination.html',
 })
 export class Pagination {
+  // Gives the "Go to" <label> something unique to point `for` at, since a
+  // page can render more than one ds-pagination instance.
+  protected readonly jumperId = `ds-pagination-jumper-${nextId++}`;
+
   total = input.required<number>();
   page = model(1);
   pageSize = model(10);

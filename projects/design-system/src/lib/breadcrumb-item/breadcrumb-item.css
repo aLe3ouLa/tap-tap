@@ -1,10 +1,8 @@
+/* The host itself is the list item (see the `host` block in
+   breadcrumb-item.ts) — a plain, non-:host selector here would compile to
+   target descendants only, never the host, under Angular's emulated
+   encapsulation. */
 :host {
-  /* The host stays out of the box tree so the <li> below is a direct flex
-     item of the <ol> in ds-breadcrumb, keeping list semantics intact. */
-  display: contents;
-}
-
-.ds-breadcrumb-item {
   display: flex;
   align-items: center;
   font: var(--ds-typography-body);
@@ -12,17 +10,17 @@
 
 /* Author styles always beat the UA [hidden] default, even at equal
    specificity, so this has to be stated explicitly. */
-.ds-breadcrumb-item[hidden] {
+:host([hidden]) {
   display: none;
 }
 
 .ds-breadcrumb-item__separator {
   margin-inline: var(--ds-space-1);
-  color: var(--ds-color-text-muted);
+  color: var(--ds-color-text-secondary);
 }
 
 .ds-breadcrumb-item__link {
-  color: var(--ds-color-text-muted);
+  color: var(--ds-color-text-secondary);
   text-decoration: none;
 }
 

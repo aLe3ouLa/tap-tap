@@ -8,6 +8,7 @@
         <span class="ds-pagination__size-changer">
           <select
             class="ds-pagination__size-select"
+            aria-label="Items per page"
             [disabled]="disabled()"
             [value]="pageSize()"
             (change)="onPageSizeChange($event)"
@@ -39,11 +40,12 @@
           class="ds-pagination__simple-input"
           type="text"
           inputmode="numeric"
+          [attr.aria-label]="'Current page, ' + pageCount() + ' pages total'"
           [disabled]="disabled()"
           [value]="page()"
           (change)="onSimpleInput($event)"
         />
-        <span class="ds-pagination__simple-total">/ {{ pageCount() }}</span>
+        <span class="ds-pagination__simple-total" aria-hidden="true">/ {{ pageCount() }}</span>
       </span>
     } @else {
       @for (item of pageItems(); track item; let i = $index) {
@@ -88,8 +90,9 @@
 
     @if (showQuickJumper()) {
       <span class="ds-pagination__jumper">
-        Go to
+        <label [for]="jumperId">Go to</label>
         <input
+          [id]="jumperId"
           class="ds-pagination__jumper-input"
           type="text"
           inputmode="numeric"

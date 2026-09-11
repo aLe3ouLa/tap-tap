@@ -101,4 +101,33 @@ describe('Pagination', () => {
     expect(component.pageSize()).toBe(20);
     expect(component.page()).toBe(4);
   });
+
+  it('gives the page-size select an accessible name', async () => {
+    fixture.componentRef.setInput('showSizeChanger', true);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const select = fixture.debugElement.query(By.css('.ds-pagination__size-select'));
+    expect(select.nativeElement.getAttribute('aria-label')).toBeTruthy();
+  });
+
+  it('associates the "Go to" label with the quick jumper input', async () => {
+    fixture.componentRef.setInput('showQuickJumper', true);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const label = fixture.debugElement.query(By.css('.ds-pagination__jumper label'));
+    const input = fixture.debugElement.query(By.css('.ds-pagination__jumper-input'));
+    expect(label.nativeElement.getAttribute('for')).toBe(input.nativeElement.id);
+    expect(input.nativeElement.id).toBeTruthy();
+  });
+
+  it('gives the simple-mode page input an accessible name', async () => {
+    fixture.componentRef.setInput('simple', true);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const input = fixture.debugElement.query(By.css('.ds-pagination__simple-input'));
+    expect(input.nativeElement.getAttribute('aria-label')).toBeTruthy();
+  });
 });

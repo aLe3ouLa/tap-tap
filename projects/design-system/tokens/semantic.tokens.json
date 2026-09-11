@@ -29,6 +29,7 @@
     },
     "text": {
       "default": { "$type": "color", "$value": "{color.neutral.700}" },
+      "secondary": { "$type": "color", "$value": "{color.neutral.600}" },
       "muted": { "$type": "color", "$value": "{color.neutral.500}" },
       "inverse": { "$type": "color", "$value": "{color.white}" }
     },
