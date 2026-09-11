@@ -1,0 +1,87 @@
+:host {
+  display: inline-block;
+}
+
+.ds-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  cursor: pointer;
+  font: var(--ds-typography-body);
+  color: var(--ds-color-text-default);
+}
+
+.ds-checkbox__input {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.ds-checkbox__box {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem; /* 16px */
+  height: 1rem;
+  box-sizing: border-box;
+  border: 1px solid var(--ds-color-action-outline-border-default);
+  border-radius: var(--ds-checkbox-radius, 0.125rem);
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-action-primary-text);
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease;
+  --ds-icon-size: 0.75rem;
+}
+
+.ds-checkbox__label:empty {
+  display: none;
+}
+
+/* Hover */
+.ds-checkbox:hover:not(.ds-checkbox--disabled) .ds-checkbox__box {
+  border-color: var(--ds-color-action-primary);
+}
+
+/* Focus */
+.ds-checkbox__input:focus-visible ~ .ds-checkbox__box {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+/* Checked / indeterminate */
+.ds-checkbox__input:checked ~ .ds-checkbox__box,
+.ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
+  border-color: var(--ds-color-action-primary);
+  background: var(--ds-color-action-primary);
+}
+
+.ds-checkbox:hover:not(.ds-checkbox--disabled) .ds-checkbox__input:checked ~ .ds-checkbox__box,
+.ds-checkbox:hover:not(.ds-checkbox--disabled)
+  .ds-checkbox__input:indeterminate
+  ~ .ds-checkbox__box {
+  background: var(--ds-color-action-primary-hover);
+  border-color: var(--ds-color-action-primary-hover);
+}
+
+/* Disabled */
+.ds-checkbox--disabled {
+  cursor: not-allowed;
+  color: var(--ds-color-action-outline-text-disabled);
+}
+
+.ds-checkbox--disabled .ds-checkbox__box {
+  border-color: var(--ds-color-action-outline-border-disabled);
+  background: var(--ds-color-surface-subtle);
+}
+
+.ds-checkbox--disabled .ds-checkbox__input:checked ~ .ds-checkbox__box,
+.ds-checkbox--disabled .ds-checkbox__input:indeterminate ~ .ds-checkbox__box {
+  border-color: var(--ds-color-action-outline-border-disabled);
+  background: var(--ds-color-action-ghost-disabled);
+  color: var(--ds-color-surface-default);
+}

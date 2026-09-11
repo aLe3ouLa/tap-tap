@@ -1,0 +1,21 @@
+<label class="ds-checkbox" [class.ds-checkbox--disabled]="disabled()">
+  <input
+    type="checkbox"
+    class="ds-checkbox__input"
+    [checked]="checked()"
+    [indeterminate]="indeterminate()"
+    [disabled]="disabled()"
+    [name]="name()"
+    [value]="value()"
+    [attr.aria-label]="ariaLabel()"
+    (change)="onChange($event)"
+  />
+  <span class="ds-checkbox__box">
+    @if (indeterminate()) {
+      <ds-icon name="minus" class="ds-checkbox__icon" />
+    } @else if (checked()) {
+      <ds-icon name="check" class="ds-checkbox__icon" />
+    }
+  </span>
+  <span class="ds-checkbox__label"><ng-content></ng-content></span>
+</label>

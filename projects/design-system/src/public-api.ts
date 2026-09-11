@@ -11,3 +11,4 @@ export * from './lib/anchor/anchor';
 export * from './lib/anchor-link/anchor-link';
 export * from './lib/tab/tab';
 export * from './lib/tab-group/tab-group';
+export * from './lib/checkbox/checkbox';
