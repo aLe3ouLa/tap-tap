@@ -1,0 +1,12 @@
+<li class="ds-anchor-link" [class.ds-anchor-link--active]="active()">
+  <a
+    class="ds-anchor-link__link"
+    [attr.href]="href()"
+    [attr.aria-current]="active() ? 'location' : null"
+  >
+    <ng-content></ng-content>
+  </a>
+  <ul class="ds-anchor-link__children">
+    <ng-content select="ds-anchor-link"></ng-content>
+  </ul>
+</li>

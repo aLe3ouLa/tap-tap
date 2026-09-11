@@ -1,0 +1,56 @@
+:host {
+  /* Keeps the <li> a direct flex item of the parent <ul>, whether that
+     parent is ds-anchor's top-level list or another ds-anchor-link's
+     nested children list. */
+  display: contents;
+}
+
+.ds-anchor-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-anchor-link__link {
+  display: block;
+  margin-inline-start: -1px;
+  padding: var(--ds-space-1) 0 var(--ds-space-1) var(--ds-space-3);
+  border-left: 2px solid transparent;
+  font: var(--ds-typography-body);
+  color: var(--ds-color-text-muted);
+  text-decoration: none;
+}
+
+.ds-anchor-link__link:hover {
+  color: var(--ds-color-action-primary-hover);
+}
+
+.ds-anchor-link__link:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-anchor-link--active > .ds-anchor-link__link {
+  border-left-color: var(--ds-color-action-primary);
+  color: var(--ds-color-action-primary);
+}
+
+.ds-anchor-link__children {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-inline-start: var(--ds-space-4);
+  list-style: none;
+}
+
+/* Nested children project into an empty <ul> when there are none; collapse
+   it so childless links don't reserve extra space. */
+.ds-anchor-link__children:empty {
+  display: none;
+}
+
+.ds-anchor-link__children .ds-anchor-link__link {
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  border-left: none;
+  font: var(--ds-typography-caption);
+}
