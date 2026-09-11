@@ -1,0 +1,102 @@
+<nav class="ds-pagination" [class.ds-pagination--disabled]="disabled()" [attr.aria-label]="ariaLabel()">
+  @if (showTotal() || showSizeChanger()) {
+    <div class="ds-pagination__info">
+      @if (showTotal()) {
+        <span class="ds-pagination__total">{{ rangeLabel() }}</span>
+      }
+      @if (showSizeChanger()) {
+        <span class="ds-pagination__size-changer">
+          <select
+            class="ds-pagination__size-select"
+            [disabled]="disabled()"
+            [value]="pageSize()"
+            (change)="onPageSizeChange($event)"
+          >
+            @for (option of pageSizeOptions(); track option) {
+              <option [value]="option">{{ option }}/page</option>
+            }
+          </select>
+          <ds-icon class="ds-pagination__size-icon" name="down" />
+        </span>
+      }
+    </div>
+  }
+
+  <div class="ds-pagination__controls">
+    <button
+      type="button"
+      class="ds-pagination__nav"
+      [disabled]="disabled() || page() === 1"
+      aria-label="Previous page"
+      (click)="prev()"
+    >
+      <ds-icon name="left" />
+    </button>
+
+    @if (simple()) {
+      <span class="ds-pagination__simple">
+        <input
+          class="ds-pagination__simple-input"
+          type="text"
+          inputmode="numeric"
+          [disabled]="disabled()"
+          [value]="page()"
+          (change)="onSimpleInput($event)"
+        />
+        <span class="ds-pagination__simple-total">/ {{ pageCount() }}</span>
+      </span>
+    } @else {
+      @for (item of pageItems(); track item; let i = $index) {
+        @if (item === 'start-ellipsis' || item === 'end-ellipsis') {
+          <button
+            type="button"
+            class="ds-pagination__item ds-pagination__item--ellipsis"
+            [disabled]="disabled()"
+            [attr.aria-label]="item === 'start-ellipsis' ? 'Jump backward' : 'Jump forward'"
+            (click)="quickJump(item === 'start-ellipsis' ? -1 : 1)"
+          >
+            <span class="ds-pagination__ellipsis-dots">···</span>
+            <ds-icon
+              class="ds-pagination__ellipsis-icon"
+              [name]="item === 'start-ellipsis' ? 'double-left' : 'double-right'"
+            />
+          </button>
+        } @else {
+          <button
+            type="button"
+            class="ds-pagination__item"
+            [class.ds-pagination__item--selected]="item === page()"
+            [disabled]="disabled()"
+            [attr.aria-current]="item === page() ? 'page' : null"
+            (click)="setPage(item)"
+          >
+            {{ item }}
+          </button>
+        }
+      }
+    }
+
+    <button
+      type="button"
+      class="ds-pagination__nav"
+      [disabled]="disabled() || page() === pageCount()"
+      aria-label="Next page"
+      (click)="next()"
+    >
+      <ds-icon name="right" />
+    </button>
+
+    @if (showQuickJumper()) {
+      <span class="ds-pagination__jumper">
+        Go to
+        <input
+          class="ds-pagination__jumper-input"
+          type="text"
+          inputmode="numeric"
+          [disabled]="disabled()"
+          (keydown.enter)="onJumperKeydown($event)"
+        />
+      </span>
+    }
+  </div>
+</nav>

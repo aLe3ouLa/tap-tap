@@ -6,6 +6,9 @@
   --ds-color-action-primary: #15c5ce;
   --ds-color-action-primary-hover: #00abb6;
   --ds-color-action-primary-text: #ffffff;
+  --ds-color-action-primary-subtle: #eefcfc;
+  --ds-color-action-primary-subtle-hover: #dff7f7;
+  --ds-color-action-primary-subtle-text: #00abb6;
   --ds-color-action-danger: #f64c4c;
   --ds-color-action-danger-hover: #ec2d30;
   --ds-color-action-danger-text: #ffffff;

@@ -1,0 +1,188 @@
+:host {
+  display: block;
+}
+
+.ds-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--ds-space-4);
+  font: var(--ds-typography-body);
+  font-family: var(--ds-font-family-base);
+  color: var(--ds-color-text-default);
+  --ds-icon-size: 0.875rem;
+}
+
+.ds-pagination__info {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+  color: var(--ds-color-text-muted);
+}
+
+.ds-pagination__size-changer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ds-pagination__size-select {
+  appearance: none;
+  height: 1.75rem;
+  padding: 0 var(--ds-space-6) 0 var(--ds-space-2);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-text-default);
+  font: inherit;
+  cursor: pointer;
+}
+
+.ds-pagination__size-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ds-pagination__size-select:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-pagination__size-icon {
+  position: absolute;
+  inset-inline-end: var(--ds-space-2);
+  pointer-events: none;
+  color: var(--ds-color-text-muted);
+}
+
+.ds-pagination__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+}
+
+.ds-pagination__nav,
+.ds-pagination__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 var(--ds-space-1);
+  border: none;
+  border-radius: var(--ds-radius-md);
+  background: none;
+  color: var(--ds-color-text-muted);
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.ds-pagination__item:hover:not(:disabled):not(.ds-pagination__item--selected) {
+  color: var(--ds-color-text-default);
+  background: var(--ds-color-surface-hover);
+}
+
+.ds-pagination__nav {
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-text-default);
+  box-shadow: var(--ds-shadow-elevation-1);
+}
+
+.ds-pagination__nav:hover:not(:disabled) {
+  box-shadow: var(--ds-shadow-elevation-2);
+}
+
+.ds-pagination__nav:focus-visible,
+.ds-pagination__item:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-pagination__nav:disabled,
+.ds-pagination__item:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background: none;
+  box-shadow: none;
+}
+
+.ds-pagination__item--selected {
+  background: var(--ds-color-action-primary-subtle);
+  color: var(--ds-color-action-primary-subtle-text);
+  font-weight: var(--ds-font-weight-medium);
+}
+
+.ds-pagination__item--selected:hover:not(:disabled) {
+  background: var(--ds-color-action-primary-subtle-hover);
+}
+
+.ds-pagination__item--ellipsis {
+  position: relative;
+  color: var(--ds-color-text-muted);
+}
+
+.ds-pagination__ellipsis-icon {
+  display: none;
+}
+
+.ds-pagination__item--ellipsis:hover:not(:disabled) .ds-pagination__ellipsis-dots {
+  display: none;
+}
+
+.ds-pagination__item--ellipsis:hover:not(:disabled) .ds-pagination__ellipsis-icon {
+  display: inline-flex;
+}
+
+.ds-pagination__simple {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+}
+
+.ds-pagination__simple-input,
+.ds-pagination__jumper-input {
+  width: 2.5rem;
+  height: 1.75rem;
+  padding: 0 var(--ds-space-1);
+  border: 1px solid var(--ds-color-border-default);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface-default);
+  color: var(--ds-color-text-default);
+  font: inherit;
+  text-align: center;
+}
+
+.ds-pagination__simple-input:disabled,
+.ds-pagination__jumper-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ds-pagination__simple-input:focus-visible,
+.ds-pagination__jumper-input:focus-visible {
+  outline: 2px solid var(--ds-color-text-default);
+  outline-offset: 2px;
+}
+
+.ds-pagination__simple-total {
+  color: var(--ds-color-text-muted);
+}
+
+.ds-pagination__jumper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  /* .ds-pagination__controls already applies an 8px gap before this element;
+     add the remaining 4px so the total gap matches the design's 12px. */
+  margin-inline-start: calc(var(--ds-space-3) - var(--ds-space-2));
+  color: var(--ds-color-text-default);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-pagination__nav,
+  .ds-pagination__item {
+    transition: none;
+  }
+}
