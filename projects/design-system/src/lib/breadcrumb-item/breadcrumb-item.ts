@@ -12,9 +12,13 @@ import { Component, input, signal } from '@angular/core';
   },
 })
 export class BreadcrumbItem {
+  /** Renders the item as a link when set; otherwise as plain text (e.g. the current page). */
   href = input<string | null>(null);
 
+  /** @internal Set imperatively by the parent ds-breadcrumb via contentChildren(). */
   hidden = signal(false);
+  /** @internal */
   collapsedBefore = signal(false);
+  /** @internal */
   showSeparator = signal(false);
 }

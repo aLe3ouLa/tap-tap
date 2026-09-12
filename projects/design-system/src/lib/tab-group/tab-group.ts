@@ -8,13 +8,20 @@ import { Tab } from '../tab/tab';
   templateUrl: './tab-group.html',
 })
 export class TabGroup {
+  /** `line` underlines the selected tab; `card` renders tabs as bordered chips. */
   variant = input<'line' | 'card'>('line');
+  /** Controls the height and font size of every projected `ds-tab`. */
   size = input<'default' | 'small'>('default');
+  /** Horizontal alignment of the tablist. */
   align = input<'left' | 'center'>('left');
+  /** Shows a border under the whole tablist, separating it from the panel below. */
   bordered = input(true);
+  /** Accessible name for the tablist landmark. */
   ariaLabel = input('Tabs');
 
+  /** Index of the selected `ds-tab`. Supports two-way binding via `[(selectedIndex)]`. */
   selectedIndex = model(0);
+  /** Emits the index of a closable tab when its × is clicked; this component doesn't remove it. */
   closed = output<number>();
 
   private readonly items = contentChildren(Tab);
@@ -35,10 +42,12 @@ export class TabGroup {
     });
   }
 
-  // A single delegated listener on the tablist, rather than an output on
-  // every projected ds-tab: matches the click-delegation pattern in
-  // ds-anchor, and lets a plain data-tab-index/data-tab-close attribute
-  // (stamped on each tab by the effect above) identify the target.
+  /**
+   * @internal A single delegated listener on the tablist, rather than an output on
+   * every projected ds-tab: matches the click-delegation pattern in
+   * ds-anchor, and lets a plain data-tab-index/data-tab-close attribute
+   * (stamped on each tab by the effect above) identify the target.
+   */
   onClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
 

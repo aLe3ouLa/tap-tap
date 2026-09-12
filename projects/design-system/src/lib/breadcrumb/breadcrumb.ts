@@ -8,9 +8,12 @@ import { BreadcrumbItem } from '../breadcrumb-item/breadcrumb-item';
   templateUrl: './breadcrumb.html',
 })
 export class Breadcrumb {
+  /** Accessible name for the nav landmark wrapping the projected `ds-breadcrumb-item` items. */
   ariaLabel = input('Breadcrumb');
-  // When set and there are more projected ds-breadcrumb-item than this,
-  // every item but the first and last collapses into a static '···'.
+  /**
+   * When set and there are more projected `ds-breadcrumb-item` than this,
+   * every item but the first and last collapses into a static '···'.
+   */
   maxItems = input<number | null>(null);
 
   private readonly items = contentChildren(BreadcrumbItem);

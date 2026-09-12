@@ -11,5 +11,6 @@ import { Component, ViewEncapsulation, input } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class ButtonGroup {
+  /** Accessible name for the group landmark wrapping the projected `ds-button` items. */
   ariaLabel = input<string | null>(null);
 }

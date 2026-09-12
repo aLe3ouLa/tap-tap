@@ -8,6 +8,7 @@ import { AnchorLink } from '../anchor-link/anchor-link';
   templateUrl: './anchor.html',
 })
 export class Anchor {
+  /** Accessible name for the nav landmark wrapping the projected `ds-anchor-link` items. */
   ariaLabel = input('Anchor');
 
   private readonly items = contentChildren(AnchorLink, { descendants: true });
@@ -23,6 +24,7 @@ export class Anchor {
     });
   }
 
+  /** @internal Template `(click)` handler; not meant to be called directly. */
   onLinkClick(event: MouseEvent): void {
     const link = (event.target as HTMLElement).closest('a[href]');
     const href = link?.getAttribute('href');

@@ -1,0 +1,60 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as CheckboxStories from './checkbox.stories';
+
+<Meta of={CheckboxStories} />
+
+# Checkbox
+
+Checkbox is used for selecting multiple values from several options.
+
+<Canvas of={CheckboxStories.Default} />
+
+## When to use
+
+- A list of options where more than one can be selected at once.
+- A single standalone setting that can be toggled on or off and doesn't take effect immediately (e.g. "Remember me"). For an option that applies instantly, prefer a Switch.
+- A "select all" control that needs a mixed/`indeterminate` state to reflect a partial selection below it.
+
+## Props
+
+<Controls />
+
+## Do's and Don'ts
+
+<div style={{ display: 'flex', gap: '1.5rem', marginTop: '0.5rem' }}>
+  <div style={{ flex: 1 }}>
+    ✅ **Do** pair every checkbox with a clear, clickable label — the whole
+    label toggles the checkbox, not just the box.
+  </div>
+  <div style={{ flex: 1 }}>
+    ❌ **Don't** use a checkbox for a single action that runs immediately on
+    click (e.g. "Delete"). Use a Button instead.
+  </div>
+</div>
+
+<div style={{ display: 'flex', gap: '1.5rem', marginTop: '0.75rem' }}>
+  <div style={{ flex: 1 }}>
+    ✅ **Do** use `indeterminate` on a parent checkbox when only some of its
+    children are checked, so the mixed state is explicit rather than implied.
+  </div>
+  <div style={{ flex: 1 }}>
+    ❌ **Don't** rely on `indeterminate` alone to convey state to screen
+    reader users — pair it with a label or nearby text that says "3 of 5
+    selected."
+  </div>
+</div>
+
+## Accessibility
+
+- Built on a native `<input type="checkbox">`, so it's focusable and toggles
+  with <kbd>Space</kbd> without any extra wiring.
+- `indeterminate` sets the native DOM property (not just a visual class), so
+  assistive tech reports the "mixed" state automatically.
+- When no label is projected, pass `ariaLabel` — an unlabeled checkbox is
+  invisible to screen reader users.
+- Disabled checkboxes are removed from tab order and excluded from form
+  submission, matching native `<input disabled>` behavior.
+
+## Related
+
+- **Radio** — use instead when only one option in a group can be selected.

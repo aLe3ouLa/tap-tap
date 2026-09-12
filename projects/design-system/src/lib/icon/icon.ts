@@ -8,5 +8,6 @@ import { ICON_NAMES } from './icon-names';
   templateUrl: './icon.html',
 })
 export class Icon {
+  /** Sprite symbol id, generated from the SVG filenames in `src/lib/icons`. */
   name = input.required<(typeof ICON_NAMES)[number]>();
 }
